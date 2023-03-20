@@ -9,8 +9,8 @@ def find_tags():
             with open(entry.path, 'r', encoding="utf-8") as file:
                 src = file.read()
                 soup = BeautifulSoup(src, "html.parser")
-                allNews = soup.findAll('tr', id=re.compile(r'^user-index-participants'))
-                for data in allNews:
+                raw_students = soup.findAll('tr', id=re.compile(r'^user-index-participants'))
+                for data in raw_students:
                     yield separate(data)
 
 
