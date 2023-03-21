@@ -60,3 +60,10 @@ def formate_lists(raw_list):
     for i, student in enumerate(raw_list):
         strings.append(f"{i + 1}. {student[2]} ({student[1]}, {student[4]})")
     return '\n'.join(strings)
+
+
+def into_files():
+    create_folders()
+    contain_folders()
+
+into_files()
