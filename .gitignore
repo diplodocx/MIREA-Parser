@@ -1,2 +1,4 @@
 .idea
 src
+Students.db
+__pycache__

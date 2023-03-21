@@ -3,7 +3,7 @@ import os
 import re
 
 
-def find_tags():
+def get_generator():
     for entry in os.scandir("./src"):
         if re.search(r'.html$', entry.name):
             with open(entry.path, 'r', encoding="utf-8") as file:
@@ -19,12 +19,4 @@ def separate(data):
     id = data.find('td', class_="cell c1").text
     post = data.find('td', class_="cell c2").text
     group = data.find('td', class_="cell c3").text
-    return (student, id, group, post)
-
-
-gen = find_tags()
-while True:
-    try:
-        print(next(gen))
-    except:
-        break
+    return {'Name': student, 'Student_ID': id, 'Student_Group': group, 'Post': post}
