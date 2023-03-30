@@ -10,6 +10,6 @@ def fill_db():
             try:
                 insertion_query = student.insert().values(next(gen))
                 connection.execute(insertion_query)
-                connection.commit()
             except AttributeError:
                 break
+        connection.commit()
