@@ -1,4 +1,4 @@
-from db_model import student
+from dbModel import student
 import os
 import sqlalchemy as db
 import re
@@ -65,5 +65,3 @@ def formate_lists(raw_list):
 def into_files():
     create_folders()
     contain_folders()
-
-into_files()

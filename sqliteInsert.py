@@ -1,6 +1,6 @@
 from parser import get_generator
 import sqlalchemy as db
-from db_model import student
+from dbModel import student
 
 def fill_db():
     gen = get_generator()
