@@ -4,3 +4,4 @@ Students.db
 __pycache__
 lists
 parser-venv
+.env
