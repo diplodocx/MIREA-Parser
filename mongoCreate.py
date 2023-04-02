@@ -21,13 +21,3 @@ def mongo_insert():
             i += 1
         except AttributeError:
             break
-
-
-def test():
-    coll = mongo_connect()
-    coll.delete_many({})
-    for el in coll.find({"Student_Group": "ИВБО-07-20"}):
-        print(el)
-
-#test()
-mongo_insert()
